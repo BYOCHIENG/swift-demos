@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		FA8D9B622F02213B007B36F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA8D9B4C2F022139007B36F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA8D9B532F022139007B36F6;
+			remoteInfo = "ml-recognize-doc-request";
+		};
+		FA8D9B6C2F02213B007B36F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA8D9B4C2F022139007B36F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA8D9B532F022139007B36F6;
+			remoteInfo = "ml-recognize-doc-request";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA8D9B542F022139007B36F6 /* ml-recognize-doc-request.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ml-recognize-doc-request.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8D9B612F02213B007B36F6 /* ml-recognize-doc-requestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ml-recognize-doc-requestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8D9B6B2F02213B007B36F6 /* ml-recognize-doc-requestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ml-recognize-doc-requestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FA8D9B562F022139007B36F6 /* ml-recognize-doc-request */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ml-recognize-doc-request";
+			sourceTree = "<group>";
+		};
+		FA8D9B642F02213B007B36F6 /* ml-recognize-doc-requestTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ml-recognize-doc-requestTests";
+			sourceTree = "<group>";
+		};
+		FA8D9B6E2F02213B007B36F6 /* ml-recognize-doc-requestUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ml-recognize-doc-requestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA8D9B512F022139007B36F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B5E2F02213B007B36F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B682F02213B007B36F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA8D9B4B2F022139007B36F6 = {
+			isa = PBXGroup;
+			children = (
+				FA8D9B562F022139007B36F6 /* ml-recognize-doc-request */,
+				FA8D9B642F02213B007B36F6 /* ml-recognize-doc-requestTests */,
+				FA8D9B6E2F02213B007B36F6 /* ml-recognize-doc-requestUITests */,
+				FA8D9B552F022139007B36F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA8D9B552F022139007B36F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA8D9B542F022139007B36F6 /* ml-recognize-doc-request.app */,
+				FA8D9B612F02213B007B36F6 /* ml-recognize-doc-requestTests.xctest */,
+				FA8D9B6B2F02213B007B36F6 /* ml-recognize-doc-requestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA8D9B532F022139007B36F6 /* ml-recognize-doc-request */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8D9B752F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-request" */;
+			buildPhases = (
+				FA8D9B502F022139007B36F6 /* Sources */,
+				FA8D9B512F022139007B36F6 /* Frameworks */,
+				FA8D9B522F022139007B36F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FA8D9B562F022139007B36F6 /* ml-recognize-doc-request */,
+			);
+			name = "ml-recognize-doc-request";
+			packageProductDependencies = (
+			);
+			productName = "ml-recognize-doc-request";
+			productReference = FA8D9B542F022139007B36F6 /* ml-recognize-doc-request.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA8D9B602F02213B007B36F6 /* ml-recognize-doc-requestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8D9B782F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-requestTests" */;
+			buildPhases = (
+				FA8D9B5D2F02213B007B36F6 /* Sources */,
+				FA8D9B5E2F02213B007B36F6 /* Frameworks */,
+				FA8D9B5F2F02213B007B36F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA8D9B632F02213B007B36F6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA8D9B642F02213B007B36F6 /* ml-recognize-doc-requestTests */,
+			);
+			name = "ml-recognize-doc-requestTests";
+			packageProductDependencies = (
+			);
+			productName = "ml-recognize-doc-requestTests";
+			productReference = FA8D9B612F02213B007B36F6 /* ml-recognize-doc-requestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA8D9B6A2F02213B007B36F6 /* ml-recognize-doc-requestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA8D9B7B2F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-requestUITests" */;
+			buildPhases = (
+				FA8D9B672F02213B007B36F6 /* Sources */,
+				FA8D9B682F02213B007B36F6 /* Frameworks */,
+				FA8D9B692F02213B007B36F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA8D9B6D2F02213B007B36F6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA8D9B6E2F02213B007B36F6 /* ml-recognize-doc-requestUITests */,
+			);
+			name = "ml-recognize-doc-requestUITests";
+			packageProductDependencies = (
+			);
+			productName = "ml-recognize-doc-requestUITests";
+			productReference = FA8D9B6B2F02213B007B36F6 /* ml-recognize-doc-requestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA8D9B4C2F022139007B36F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					FA8D9B532F022139007B36F6 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FA8D9B602F02213B007B36F6 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FA8D9B532F022139007B36F6;
+					};
+					FA8D9B6A2F02213B007B36F6 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FA8D9B532F022139007B36F6;
+					};
+				};
+			};
+			buildConfigurationList = FA8D9B4F2F022139007B36F6 /* Build configuration list for PBXProject "ml-recognize-doc-request" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA8D9B4B2F022139007B36F6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FA8D9B552F022139007B36F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA8D9B532F022139007B36F6 /* ml-recognize-doc-request */,
+				FA8D9B602F02213B007B36F6 /* ml-recognize-doc-requestTests */,
+				FA8D9B6A2F02213B007B36F6 /* ml-recognize-doc-requestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA8D9B522F022139007B36F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B5F2F02213B007B36F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B692F02213B007B36F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA8D9B502F022139007B36F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B5D2F02213B007B36F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8D9B672F02213B007B36F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA8D9B632F02213B007B36F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA8D9B532F022139007B36F6 /* ml-recognize-doc-request */;
+			targetProxy = FA8D9B622F02213B007B36F6 /* PBXContainerItemProxy */;
+		};
+		FA8D9B6D2F02213B007B36F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA8D9B532F022139007B36F6 /* ml-recognize-doc-request */;
+			targetProxy = FA8D9B6C2F02213B007B36F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA8D9B732F02213B007B36F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA8D9B742F02213B007B36F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA8D9B762F02213B007B36F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-request";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA8D9B772F02213B007B36F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-request";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA8D9B792F02213B007B36F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-requestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ml-recognize-doc-request.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ml-recognize-doc-request";
+			};
+			name = Debug;
+		};
+		FA8D9B7A2F02213B007B36F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-requestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ml-recognize-doc-request.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ml-recognize-doc-request";
+			};
+			name = Release;
+		};
+		FA8D9B7C2F02213B007B36F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-requestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ml-recognize-doc-request";
+			};
+			name = Debug;
+		};
+		FA8D9B7D2F02213B007B36F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ6GT538WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BYOCHIENG.ml-recognize-doc-requestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ml-recognize-doc-request";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA8D9B4F2F022139007B36F6 /* Build configuration list for PBXProject "ml-recognize-doc-request" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8D9B732F02213B007B36F6 /* Debug */,
+				FA8D9B742F02213B007B36F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8D9B752F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-request" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8D9B762F02213B007B36F6 /* Debug */,
+				FA8D9B772F02213B007B36F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8D9B782F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-requestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8D9B792F02213B007B36F6 /* Debug */,
+				FA8D9B7A2F02213B007B36F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA8D9B7B2F02213B007B36F6 /* Build configuration list for PBXNativeTarget "ml-recognize-doc-requestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8D9B7C2F02213B007B36F6 /* Debug */,
+				FA8D9B7D2F02213B007B36F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA8D9B4C2F022139007B36F6 /* Project object */;
+}
