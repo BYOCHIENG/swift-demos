@@ -1,6 +1,6 @@
 # Swift Demos
 
-A monorepo for testing Swift and iOS development concepts from Apple's Developer Documentation.
+A monorepo for testing Swift and iOS development concepts with Apples Machine Learning APIs 
 
 ## Projects
 
