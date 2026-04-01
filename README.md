@@ -4,19 +4,27 @@ A monorepo for testing Swift and iOS development concepts from Apple's Developer
 
 ## Projects
 
-### 🧠 ml-analyze-sentiment
-A sentiment analysis app that uses Natural Language framework to analyze user opinions about hiking. Features:
-- Text input for collecting user opinions
-- Real-time sentiment scoring using NL framework
-- Chart visualization of sentiment distribution
-- Response history with sentiment indicators
+###  ml-recognize-doc-request
+Implementation of the RecognizeDocumentRequest API. Features:
+- Receipt Scanning
+- Text, Table, List and Data obeject recognition
+- Bounding box visualization
+- Document scan summary
 
-### 📸 ml-image-parse
+###  ml-image-parse
 An image parsing app that demonstrates Vision and ML frameworks for text recognition. Features:
 - Image gallery with sample receipts and signs
 - Text recognition using Vision framework
 - Translation capabilities
 - Bounding box visualization for detected text
+
+
+###  ml-analyze-sentiment
+A sentiment analysis app that uses Natural Language framework to analyze user opinions about hiking. Features:
+- Text input for collecting user opinions
+- Real-time sentiment scoring using NL framework
+- Chart visualization of sentiment distribution
+- Response history with sentiment indicators
 
 ## Requirements
 
