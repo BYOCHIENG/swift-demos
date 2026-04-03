@@ -5,11 +5,22 @@ A monorepo for testing Swift and iOS development concepts with Apples Machine Le
 ## Projects
 
 ###  ml-recognize-doc-request
-Implementation of the RecognizeDocumentRequest API. Features:
-- Receipt Scanning
-- Text, Table, List and Data obeject recognition
-- Bounding box visualization
-- Document scan summary
+
+An implementation of Apple's RecognizeDocumentRequest API that turns your camera into a receipt scanner. The app uses AVFoundation to capture photos and Vision's document recognition to extract structured data from receipts. Each scan returns the business name, date, line items with prices, and the total. The bounding box overlay uses color coding to show different element types detected by the model - green for text, blue for tables, orange for lists, and purple for barcodes. Everything runs on-device with no network dependency.
+
+| <img src="imgs/ml-doc-request-1.jpg" width="300"> | <img src="imgs/ml-doc-request-2.jpg" width="300"> |
+|:---:|:---:|
+| Live camera feed with capture button | Scanned receipt with bounding box visualization |
+
+Features:
+- Real-time camera preview with live frame handling
+- Photo capture with automatic document recognition
+- Structured data extraction: business name, date, line items, totals
+- Color-coded bounding boxes for text, tables, lists, and barcodes
+- Toggle between annotated and original image views
+- Full-text fallback display for unrecognized structures
+
+
 
 ###  ml-image-parse
 An image parsing app that demonstrates Vision and ML frameworks for text recognition. Features:
