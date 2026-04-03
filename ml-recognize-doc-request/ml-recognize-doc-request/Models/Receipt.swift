@@ -15,12 +15,210 @@ struct Receipt: Equatable {
     let fullText: String
     let observations: [DocumentObservation]
     
+    // Parsed receipt data
+    let businessName: String?
+    let date: String?
+    let lineItems: [LineItem]
+    let total: String?
+    
+    struct LineItem {
+        let description: String
+        let price: String?
+    }
+    
     init(image: CGImage, observations: [DocumentObservation]) {
         self.image = image
         self.observations = observations
         let container = observations.first?.document
         self.title = container?.title?.transcript
         self.fullText = container?.text.transcript ?? ""
+        
+        // Parse structured data
+        self.businessName = Self.extractBusinessName(from: observations)
+        self.date = Self.extractDate(from: observations)
+        self.lineItems = Self.extractLineItems(from: observations)
+        self.total = Self.extractTotal(from: observations)
+        
+        // Debug: Print structure
+        Self.printObservationStructure(observations)
+    }
+    
+    // MARK: - Debug Helpers
+    
+    static func printObservationStructure(_ observations: [DocumentObservation]) {
+        print("\n========== DOCUMENT OBSERVATION STRUCTURE ==========")
+        
+        for (index, observation) in observations.enumerated() {
+            print("\n📄 Observation \(index):")
+            let document = observation.document
+            
+            // Document metadata
+            print("  📋 Title: \(document.title?.transcript ?? "none")")
+            print("  📝 Full Text Preview: \(String(document.text.transcript.prefix(100)))...")
+            
+            // Tables
+            print("\n  📊 Tables: \(document.tables.count)")
+            for (tableIndex, table) in document.tables.enumerated() {
+                print("    Table \(tableIndex): \(table.rows.count) rows")
+                printTableStructure(table, indent: "      ")
+            }
+            
+            // Lists
+            print("\n  📋 Lists: \(document.lists.count)")
+            for (listIndex, list) in document.lists.enumerated() {
+                print("    List \(listIndex): \(list.items.count) items")
+                for (itemIndex, item) in list.items.enumerated() {
+                    print("      Item \(itemIndex): \(item.content.text.transcript)")
+                }
+            }
+            
+            // Barcodes
+            print("\n  📱 Barcodes: \(document.barcodes.count)")
+            for (barcodeIndex, barcode) in document.barcodes.enumerated() {
+                print("    Barcode \(barcodeIndex): \(barcode.payloadData?.base64EncodedString() ?? "no payload")")
+            }
+            
+            // Text content
+            print("\n  📝 Full Text Length: \(document.text.transcript.count) characters")
+        }
+        
+        print("\n====================================================\n")
+    }
+    
+    static func printTableStructure(_ table: DocumentObservation.Container.Table, indent: String) {
+        for (rowIndex, row) in table.rows.enumerated() {
+            print("\(indent)Row \(rowIndex): \(row.count) cells")
+            for (cellIndex, cell) in row.enumerated() {
+                let cellText = cell.content.text.transcript
+                print("\(indent)  Cell[\(rowIndex),\(cellIndex)]: \(cellText)")
+                
+                // Check for nested tables
+                if !cell.content.tables.isEmpty {
+                    print("\(indent)    ⚠️ Contains \(cell.content.tables.count) nested tables")
+                }
+            }
+        }
+    }
+    
+    // MARK: - Data Extraction
+    
+    static func extractBusinessName(from observations: [DocumentObservation]) -> String? {
+        guard let document = observations.first?.document else { return nil }
+        
+        // Strategy 1: Use title if available
+        if let title = document.title?.transcript, !title.isEmpty {
+            return title
+        }
+        
+        // Strategy 2: First line of text (often the business name)
+        let fullText = document.text.transcript
+        let lines = fullText.components(separatedBy: .newlines)
+        if let firstLine = lines.first(where: { !$0.trimmingCharacters(in: .whitespaces).isEmpty }) {
+            return firstLine.trimmingCharacters(in: .whitespaces)
+        }
+        
+        return nil
+    }
+    
+    static func extractDate(from observations: [DocumentObservation]) -> String? {
+        guard let document = observations.first?.document else { return nil }
+        
+        let fullText = document.text.transcript
+        
+        // Look for date patterns
+        let datePatterns = [
+            #"\d{1,2}/\d{1,2}/\d{2,4}"#,  // MM/DD/YYYY or M/D/YY
+            #"\d{4}-\d{2}-\d{2}"#,         // YYYY-MM-DD
+            #"[A-Z][a-z]+ \d{1,2},? \d{4}"# // Month DD, YYYY
+        ]
+        
+        for pattern in datePatterns {
+            if let range = fullText.range(of: pattern, options: String.CompareOptions.regularExpression) {
+                return String(fullText[range])
+            }
+        }
+        
+        return nil
+    }
+    
+    static func extractLineItems(from observations: [DocumentObservation]) -> [LineItem] {
+        guard let document = observations.first?.document else { return [] }
+        
+        var items: [LineItem] = []
+        
+        // Strategy: Look for tables (receipts often structure items as tables)
+        for table in document.tables {
+            for row in table.rows {
+                guard row.count >= 2 else { continue } // Need at least description and price
+                
+                let description = row[0].content.text.transcript
+                let price = row.count > 1 ? row[row.count - 1].content.text.transcript : nil
+                
+                // Filter out header rows
+                if !description.lowercased().contains("item") &&
+                   !description.lowercased().contains("description") {
+                    items.append(LineItem(description: description, price: price))
+                }
+            }
+        }
+        
+        // If no tables, try to parse from text blocks
+        if items.isEmpty {
+            items = extractLineItemsFromText(document.text)
+        }
+        
+        return items
+    }
+    
+    static func extractLineItemsFromText(_ text: DocumentObservation.Container.Text) -> [LineItem] {
+        var items: [LineItem] = []
+        
+        let fullText = text.transcript
+        let lines = fullText.components(separatedBy: .newlines)
+        
+        // Look for lines with prices (pattern: text followed by dollar amount)
+        let pricePattern = #"\$?\d+\.\d{2}"#
+        
+        for lineText in lines {
+            if let range = lineText.range(of: pricePattern, options: String.CompareOptions.regularExpression) {
+                let price = String(lineText[range])
+                let description = lineText.replacingOccurrences(of: price, with: "").trimmingCharacters(in: CharacterSet.whitespaces)
+                
+                if !description.isEmpty {
+                    items.append(LineItem(description: description, price: price))
+                }
+            }
+        }
+        
+        return items
+    }
+    
+    static func extractTotal(from observations: [DocumentObservation]) -> String? {
+        guard let document = observations.first?.document else { return nil }
+        
+        let fullText = document.text.transcript
+        let lines = fullText.components(separatedBy: .newlines)
+        let pricePattern = #"\$?\d+\.\d{2}"#
+        var lastPrice: String?
+        
+        // Look for "Total" keyword followed by amount
+        for lineText in lines {
+            let lineLower = lineText.lowercased()
+            
+            if lineLower.contains("total") || lineLower.contains("amount due") {
+                if let range = lineText.range(of: pricePattern, options: String.CompareOptions.regularExpression) {
+                    return String(lineText[range])
+                }
+            }
+            
+            // Keep track of last price as fallback
+            if let range = lineText.range(of: pricePattern, options: String.CompareOptions.regularExpression) {
+                lastPrice = String(lineText[range])
+            }
+        }
+        
+        // Fallback: return the last price found (often the total)
+        return lastPrice
     }
     
     // Create an annotated image with bounding boxes drawn on it
