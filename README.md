@@ -10,7 +10,7 @@ An implementation of Apple's RecognizeDocumentRequest API that turns your camera
 
 | <img src="imgs/ml-doc-request-1.jpg" width="300"> | <img src="imgs/ml-doc-request-2.jpg" width="300"> |
 |:---:|:---:|
-| Live camera feed with capture button | Scanned receipt with bounding box visualization |
+| Scan Result (ReceiptDetailView) | More details of scan |
 
 Features:
 - Real-time camera preview with live frame handling
